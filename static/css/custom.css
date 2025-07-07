@@ -1,44 +1,45 @@
 /* 整個頭部區域的樣式 */
 .site-header {
-  padding: 24px;
-  background: #fafbfc;
+  /* 移除了 padding，讓 header 緊貼頁面邊緣 */
+  /* 增加一個 margin-bottom，讓 Logo 和下方的文章內容之間有一定間距 */
+  margin-bottom: 30px; 
 }
 
-/* Logo 鏈接的整體佈局，使用 Flexbox */
+/* Logo 鏈接的整體佈局 */
 .logo-link {
-  display: flex;
-  align-items: center; /* 垂直居中對齊 */
-  text-decoration: none; /* 去掉鏈接下劃線 */
+  display: inline-flex; /* 使用 inline-flex 讓容器寬度自適應內容 */
+  align-items: flex-start; /* 關鍵改動：從 center 改為 flex-start，實現頂部對齊 */
+  text-decoration: none;
+  padding: 20px; /* 給 Logo 整體一個內邊距，避免緊貼螢幕邊緣，可調整或移除 */
 }
 
 /* Logo 圖片樣式 */
 .logo-image {
-  height: 60px; /* 根據需要調整 */
-  width: 60px;  /* 根據需要調整 */
-  border-radius: 50%; /* 圓形效果 */
-  margin-right: 16px; /* 與右側文字的間距 */
+  height: 48px; /* 您可以微調這個數字來縮放蝴蝶大小 */
+  width: 48px;  /* 保持與 height 一致即可 */
+  margin-right: 16px;
 }
 
 /* 右側文字的容器 */
 .logo-text-container {
   display: flex;
-  flex-direction: column; /* 讓主副標題垂直排列 */
+  flex-direction: column;
 }
 
 /* 主標題樣式 */
 .logo-title {
-  font-size: 1.8em; /* 調整字體大小 */
+  font-size: 1.8em; /* 您可以微調這個數字來縮放文字 */
   font-weight: 700;
   color: #222;
-  padding-bottom: 4px; /* 與下方紅線的距離 */
-  border-bottom: 2px solid #e53935; /* 實現您想要的紅色底線！ */
-  line-height: 1.2; /* 調整行高 */
+  padding-bottom: 4px;
+  border-bottom: 2px solid #e53935; /* 紅線 */
+  line-height: 1.2;
 }
 
 /* 副標題樣式 */
 .logo-subtitle {
   font-size: 1em;
   color: #666;
-  letter-spacing: 1px; /* 字符間距 */
-  margin-top: 8px; /* 與上方主標題的距離 */
+  letter-spacing: 1px;
+  margin-top: 8px;
 }
