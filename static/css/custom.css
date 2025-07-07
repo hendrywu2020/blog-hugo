@@ -1,0 +1,44 @@
+/* 整個頭部區域的樣式 */
+.site-header {
+  padding: 24px;
+  background: #fafbfc;
+}
+
+/* Logo 鏈接的整體佈局，使用 Flexbox */
+.logo-link {
+  display: flex;
+  align-items: center; /* 垂直居中對齊 */
+  text-decoration: none; /* 去掉鏈接下劃線 */
+}
+
+/* Logo 圖片樣式 */
+.logo-image {
+  height: 60px; /* 根據需要調整 */
+  width: 60px;  /* 根據需要調整 */
+  border-radius: 50%; /* 圓形效果 */
+  margin-right: 16px; /* 與右側文字的間距 */
+}
+
+/* 右側文字的容器 */
+.logo-text-container {
+  display: flex;
+  flex-direction: column; /* 讓主副標題垂直排列 */
+}
+
+/* 主標題樣式 */
+.logo-title {
+  font-size: 1.8em; /* 調整字體大小 */
+  font-weight: 700;
+  color: #222;
+  padding-bottom: 4px; /* 與下方紅線的距離 */
+  border-bottom: 2px solid #e53935; /* 實現您想要的紅色底線！ */
+  line-height: 1.2; /* 調整行高 */
+}
+
+/* 副標題樣式 */
+.logo-subtitle {
+  font-size: 1em;
+  color: #666;
+  letter-spacing: 1px; /* 字符間距 */
+  margin-top: 8px; /* 與上方主標題的距離 */
+}
