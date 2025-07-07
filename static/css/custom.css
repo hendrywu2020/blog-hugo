@@ -1,45 +1,65 @@
-/* 整個頭部區域的樣式 */
-.site-header {
-  /* 移除了 padding，讓 header 緊貼頁面邊緣 */
-  /* 增加一個 margin-bottom，讓 Logo 和下方的文章內容之間有一定間距 */
-  margin-bottom: 30px; 
-}
+<style>
+  /* 整個頭部區域的樣式 */
+  .site-header {
+    margin-bottom: 30px; 
+  }
 
-/* Logo 鏈接的整體佈局 */
-.logo-link {
-  display: inline-flex; /* 使用 inline-flex 讓容器寬度自適應內容 */
-  align-items: flex-start; /* 關鍵改動：從 center 改為 flex-start，實現頂部對齊 */
-  text-decoration: none;
-  padding: 20px; /* 給 Logo 整體一個內邊距，避免緊貼螢幕邊緣，可調整或移除 */
-}
+  /* Logo 鏈接的整體佈局 (用紅色虛線標示) */
+  .logo-link {
+    display: inline-flex;
+    align-items: flex-start; /* 我們期望的頂部對齊 */
+    text-decoration: none;
+    padding: 20px;
+    border: 1px dashed red; /* 診斷輔助線：紅色 */
+  }
 
-/* Logo 圖片樣式 */
-.logo-image {
-  height: 48px; /* 您可以微調這個數字來縮放蝴蝶大小 */
-  width: 48px;  /* 保持與 height 一致即可 */
-  margin-right: 16px;
-}
+  /* 測試圖片樣式 (用藍色虛線標示) */
+  .logo-image {
+    height: 50px;  /* 給測試圖片一個固定的尺寸 */
+    width: 50px;
+    margin-right: 16px;
+    border: 1px dashed blue; /* 診斷輔助線：藍色 */
+  }
 
-/* 右側文字的容器 */
-.logo-text-container {
-  display: flex;
-  flex-direction: column;
-}
+  /* 右側文字的容器 */
+  .logo-text-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-/* 主標題樣式 */
-.logo-title {
-  font-size: 1.8em; /* 您可以微調這個數字來縮放文字 */
-  font-weight: 700;
-  color: #222;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #e53935; /* 紅線 */
-  line-height: 1.2;
-}
+  /* 主標題樣式 */
+  .logo-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #222;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #e53935; /* 紅線 */
+    line-height: 1.2;
+  }
 
-/* 副標題樣式 */
-.logo-subtitle {
-  font-size: 1em;
-  color: #666;
-  letter-spacing: 1px;
-  margin-top: 8px;
-}
+  /* 副標題樣式 */
+  .logo-subtitle {
+    font-size: 1em;
+    color: #666;
+    letter-spacing: 1px;
+    margin-top: 8px;
+  }
+</style>
+<header class="site-header">
+  <a href="{{ .Site.Home.RelPermalink }}" class="logo-link">
+    
+    <img src="https://via.placeholder.com/100" alt="測試Logo" class="logo-image">
+
+    <div class="logo-text-container">
+      
+      <div class="logo-title">
+        風向 pulse
+      </div>
+      
+      <div class="logo-subtitle">
+        以事實、常識、邏輯，觀世界
+      </div>
+
+    </div>
+  </a>
+</header>
