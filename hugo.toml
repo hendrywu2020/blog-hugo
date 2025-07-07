@@ -9,7 +9,7 @@ defaultContentLanguage = "zh"
   env = "production" # 可選：development / production
 
   [params.profileMode]
-    enabled = true
+    enabled = false
     title = "風向 Pulse 3"
     subtitle = "以事實、常識、邏輯，觀世界"
     imageUrl = "img/logo.png"
