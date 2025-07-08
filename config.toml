@@ -1,5 +1,0 @@
-baseURL = "https://nda.pages.dev/" # 請換成你的網站網址
-languageCode = "zh-TW"
-title = "風向 Pulse 3"
-theme = "PaperMod" # 如果你暫時不想用任何主題，可以把這個欄位清空
-paginate = 5
