@@ -11,8 +11,6 @@ title = "風向 Pulse"
 theme = "PaperMod"
 
 # --- 分頁設定 (根據錯誤日誌修正) ---
-# 舊的、錯誤的 `paginate` 指令已被移除
-# 改用 Hugo v0.128.0+ 的新語法
 [pagination]
   pagerSize = 10 # 每頁顯示10篇文章
 
@@ -22,24 +20,13 @@ theme = "PaperMod"
 [params]
   author = "風向 Pulse"
   description = "以事實、常識、邏輯，觀世界"
-  defaultTheme = "auto"      # "auto", "light", "dark"
-  ShowReadingTime = true     # 顯示文章閱讀時間
-  ShowShareButtons = true    # 顯示社群分享按鈕
-  ShowCodeCopyButtons = true # 顯示程式碼區塊的複製按鈕
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
 
-  # --- 首頁設定：個人簡介模式 ---
-  [params.profileMode]
-    enabled = true # 啟用此模式，讓首頁成為一個名片頁
-    title = "風向 Pulse"
-    subtitle = "以事實、常識、邏輯，觀世界"
-    imageUrl = "/img/logo.svg" # Logo 圖片路徑
-    imageWidth = 240           # Logo 顯示寬度 (像素)
-    imageHeight = 120          # Logo 顯示高度 (像素)
-
-    # 在個人簡介下方顯示的按鈕
-    [[params.profileMode.buttons]]
-      name = "瀏覽所有文章"
-      url = "/posts"
+  # LOGO設置（會顯示於網站頂部及部分主題區塊）
+  logo = "/img/logo.svg"      # 將 logo.svg 作為網站 LOGO
 
 # ===============================================================
 # 網站頂部導覽列選單
