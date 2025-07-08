@@ -19,7 +19,7 @@ paginate = 10
     enabled = true # 設定為 true 來啟用首頁個人簡介
     title = "風向 Pulse" # 顯示在個人簡介上的大標題
     subtitle = "以事實、常識、邏輯，觀世界" # 顯示在標題下方的副標題
-    # imageUrl = "/images/profile.png" # 如果您有頭像圖片，可以取消這行的註解並上傳圖片到 static/images/profile.png
+    # imageUrl = "/images/profile.png" # 如果您有頭像圖片，可以取消這行的註解並上傳圖片到 static/images/logo.svg
     # imageWidth = 120
     # imageHeight = 120
 
