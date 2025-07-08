@@ -1,31 +1,34 @@
-# 這是您網站唯一的設定檔
+# 這是您網站唯一的、修正過的設定檔
 baseURL = "https://nda.pages.dev/"
-languageCode = "zh-CN" # 已為您設定為繁體中文
+languageCode = "zh-TW"
 title = "風向 Pulse"
 theme = "PaperMod"
-paginate = 10
 
-# 這是 PaperMod 主題的參數設定
+# Hugo 的分頁設定 (已修正為新版語法)
+[pagination]
+  pagerSize = 10
+
+# PaperMod 主題的參數設定
 [params]
-  author = "風向 Pulse" # 您可以修改成您的作者名
+  author = "風向 Pulse"
   description = "以事實、常識、邏輯，觀世界"
-  defaultTheme = "auto" # 預設主題模式 (auto, light, dark)
-  ShowReadingTime = true # 顯示文章閱讀時間
-  ShowShareButtons = true # 顯示分享按鈕
-  ShowCodeCopyButtons = true # 顯示程式碼複製按鈕
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
 
   # 首頁的個人簡介模式 (Profile Mode)
   [params.profileMode]
-    enabled = true # 設定為 true 來啟用首頁個人簡介
-    title = "風向 Pulse" # 顯示在個人簡介上的大標題
-    subtitle = "以事實、常識、邏輯，觀世界" # 顯示在標題下方的副標題
-    imageUrl = "/img/logo.svg" # 如果您有頭像圖片，可以取消這行的註解並上傳圖片到 static/img/logo.svg
-    # imageWidth = 240
-    # imageHeight = 120
-    # 在個人簡介下方添加按鈕
+    enabled = true
+    title = "風向 Pulse"
+    subtitle = "以事實、常識、邏輯，觀世界"
+    imageUrl = "/img/logo.svg" # 確保您的 Logo 路徑是 static/img/logo.svg
+    imageWidth = 240
+    imageHeight = 120
+
     [[params.profileMode.buttons]]
-      name = "所有文章"
-      url = "/posts" # 連結到文章列表頁
+      name = "瀏覽所有文章"
+      url = "/posts"
 
 # 網站頂部的導覽列選單
 [[menu.main]]
@@ -45,5 +48,3 @@ paginate = 10
   name = "標籤"
   url = "/tags/"
   weight = 30
-
-
