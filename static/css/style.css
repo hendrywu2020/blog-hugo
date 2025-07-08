@@ -1,0 +1,64 @@
+/* --- 全局設定 --- */
+body {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+    line-height: 1.6;
+
+    /* 
+     * 控制「內文」的預設字體大小
+     * 你可以試著調整這個數值，例如 16px, 18px, 或 1.1rem 
+     */
+    font-size: 17px; 
+}
+
+/* --- 頁首 (Header) --- */
+header h1 {
+    text-align: center;
+    margin-bottom: 40px;
+
+    /* 控制網站「主標題」的字體大小 */
+    font-size: 2.5rem; /* rem 是一個相對單位，2.5rem 大約是 17px * 2.5 = 42.5px */
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* --- 文章列表和文章頁的標題 --- */
+h2 {
+    /* 
+     * 控制「文章標題」的字體大小 
+     * 這會影響首頁的文章列表標題
+     */
+    font-size: 1.8rem; /* 大約是 17px * 1.8 = 30.6px */
+}
+
+/* --- 文章摘要與內文 --- */
+.summary, .content {
+    /* 
+     * 如果你想讓摘要或文章內文的字體大小與全局設定不同，
+     * 可以在這裡單獨設定。通常保持和 body 一致即可。
+     * 例如：font-size: 18px; 
+     */
+}
+
+/* --- 作者、日期等元信息 --- */
+.meta {
+    /* 控制「作者」和「日期」的字體大小 */
+    font-size: 0.9em; /* em 是另一個相對單位，0.9em 代表父元素的 0.9 倍 */
+    color: #666; 
+    margin-bottom: 15px;
+}
+
+/* --- 頁尾 (Footer) --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    
+    /* 控制頁尾「版權聲明」的字體大小 */
+    font-size: 0.8rem; /* 大約是 17px * 0.8 = 13.6px */
+    color: #888;
+}
