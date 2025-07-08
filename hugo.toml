@@ -13,7 +13,7 @@ theme = "PaperMod"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowCodeCopyButtons = true
-  logo = "/img/logo.svg"   # 這行設定 logo，小寫 logo
+  logo = "img/logo.svg"   # 這行設定 logo，小寫 logo
 
 [[menu.main]]
   identifier = "archives"
