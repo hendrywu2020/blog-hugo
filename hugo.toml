@@ -1,36 +1,49 @@
-# 這是您網站唯一的、修正過的設定檔
+# ===============================================================
+# Hugo & PaperMod 網站設定檔 (最終修正版)
+# 基於 Cloudflare 部署日誌修正
+# 日期: 2025年7月8日
+# ===============================================================
+
+# --- 網站基本資訊 ---
 baseURL = "https://nda.pages.dev/"
-languageCode = "zh-TW"
+languageCode = "zh-TW" # 繁體中文
 title = "風向 Pulse"
 theme = "PaperMod"
 
-# Hugo 的分頁設定 (已修正為新版語法)
+# --- 分頁設定 (根據錯誤日誌修正) ---
+# 舊的、錯誤的 `paginate` 指令已被移除
+# 改用 Hugo v0.128.0+ 的新語法
 [pagination]
-  pagerSize = 10
+  pagerSize = 10 # 每頁顯示10篇文章
 
-# PaperMod 主題的參數設定
+# ===============================================================
+# PaperMod 主題專用參數
+# ===============================================================
 [params]
   author = "風向 Pulse"
   description = "以事實、常識、邏輯，觀世界"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowCodeCopyButtons = true
+  defaultTheme = "auto"      # "auto", "light", "dark"
+  ShowReadingTime = true     # 顯示文章閱讀時間
+  ShowShareButtons = true    # 顯示社群分享按鈕
+  ShowCodeCopyButtons = true # 顯示程式碼區塊的複製按鈕
 
-  # 首頁的個人簡介模式 (Profile Mode)
+  # --- 首頁設定：個人簡介模式 ---
   [params.profileMode]
-    enabled = true
+    enabled = true # 啟用此模式，讓首頁成為一個名片頁
     title = "風向 Pulse"
     subtitle = "以事實、常識、邏輯，觀世界"
-    imageUrl = "/img/logo.svg" # 確保您的 Logo 路徑是 static/img/logo.svg
-    imageWidth = 240
-    imageHeight = 120
+    imageUrl = "/img/logo.svg" # Logo 圖片路徑
+    imageWidth = 240           # Logo 顯示寬度 (像素)
+    imageHeight = 120          # Logo 顯示高度 (像素)
 
+    # 在個人簡介下方顯示的按鈕
     [[params.profileMode.buttons]]
       name = "瀏覽所有文章"
       url = "/posts"
 
-# 網站頂部的導覽列選單
+# ===============================================================
+# 網站頂部導覽列選單
+# ===============================================================
 [[menu.main]]
   identifier = "archives"
   name = "文章封存"
@@ -39,12 +52,12 @@ theme = "PaperMod"
 
 [[menu.main]]
   identifier = "search"
-  name = "搜尋"
+  name = "站內搜尋"
   url = "/search/"
   weight = 20
 
 [[menu.main]]
   identifier = "tags"
-  name = "標籤"
+  name = "所有標籤"
   url = "/tags/"
   weight = 30
