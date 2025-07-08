@@ -1,22 +1,15 @@
-/* 隱藏由 .Site.Title 產生的純文字 Logo */
-.nav > a.logo {
-    display: none;
-}
-
-/* 確保圖片 Logo 容器和圖片本身正確顯示 */
-.nav .logo a,
-.nav .logo a:hover {
-    /* 使用 flex 以確保圖片垂直置中，效果更好 */
+/* 選定包含 Logo 圖片和文字的連結 <a> */
+.logo a {
+    /* 關鍵：將文字大小設為 0，這樣文字就看不見了 */
+    font-size: 0;
+    /* 為了讓圖片垂直置中，效果更好 */
     display: flex;
     align-items: center;
-    /* 清除可能存在的邊框 */
-    border: none;
-    padding: 0;
 }
 
-.nav .logo img {
-    /* 設定 Logo 圖片的最大高度，您可以根據需求調整此數值 */
-    max-height: 40px; 
-    width: auto; /* 寬度自動，保持圖片比例 */
-    display: block;
+/* 讓 Logo 圖片正常顯示 */
+.logo a img {
+    /* 設定您希望的 Logo 高度 */
+    max-height: 45px;
+    width: auto; /* 寬度自動，保持比例 */
 }
