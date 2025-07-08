@@ -1,22 +1,11 @@
-# ===============================================================
-# Hugo & PaperMod 網站設定檔 (最終修正版)
-# 基於 Cloudflare 部署日誌修正
-# 日期: 2025年7月8日
-# ===============================================================
-
-# --- 網站基本資訊 ---
 baseURL = "https://nda.pages.dev/"
-languageCode = "zh-TW" # 繁體中文
+languageCode = "zh-TW"
 title = "風向 Pulse"
 theme = "PaperMod"
 
-# --- 分頁設定 (根據錯誤日誌修正) ---
 [pagination]
-  pagerSize = 10 # 每頁顯示10篇文章
+  pagerSize = 10
 
-# ===============================================================
-# PaperMod 主題專用參數
-# ===============================================================
 [params]
   author = "風向 Pulse"
   description = "以事實、常識、邏輯，觀世界"
@@ -24,13 +13,8 @@ theme = "PaperMod"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowCodeCopyButtons = true
+  logo = "/img/logo.svg"   # 這行設定 logo，小寫 logo
 
-  # LOGO設置（會顯示於網站頂部及部分主題區塊）
-  logo = "/img/logo.svg"      # 將 logo.svg 作為網站 LOGO
-
-# ===============================================================
-# 網站頂部導覽列選單
-# ===============================================================
 [[menu.main]]
   identifier = "archives"
   name = "文章封存"
