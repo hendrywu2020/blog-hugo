@@ -1,20 +1,45 @@
-baseURL = 'https://nda.pages.dev/'
-title = '風向 Pulse 3'
+# 這是您網站唯一的設定檔
+baseURL = "https://nda.pages.dev/"
+languageCode = "zh-CN" # 已為您設定為繁體中文
+title = "風向 Pulse"
 theme = "PaperMod"
-languageCode = "zh-cn"
-hasCJKLanguage = true
-defaultContentLanguage = "zh"
+paginate = 5
 
+# 這是 PaperMod 主題的參數設定
 [params]
-  env = "production" # 可選：development / production
+  author = "風向 Pulse" # 您可以修改成您的作者名
+  description = "以事實、常識、邏輯，觀世界"
+  defaultTheme = "auto" # 預設主題模式 (auto, light, dark)
+  ShowReadingTime = true # 顯示文章閱讀時間
+  ShowShareButtons = true # 顯示分享按鈕
+  ShowCodeCopyButtons = true # 顯示程式碼複製按鈕
 
+  # 首頁的個人簡介模式 (Profile Mode)
   [params.profileMode]
-    enabled = false
-    title = "風向 Pulse 3"
-    subtitle = "以事實、常識、邏輯，觀世界"
-    imageUrl = "img/logo.png"
-    imageWidth = 120
-    imageHeight = 120
+    enabled = true # 設定為 true 來啟用首頁個人簡介
+    title = "風向 Pulse" # 顯示在個人簡介上的大標題
+    subtitle = "以事實、常識、邏輯，觀世界" # 顯示在標題下方的副標題
+    # imageUrl = "/images/profile.png" # 如果您有頭像圖片，可以取消這行的註解並上傳圖片到 static/images/profile.png
+    # imageWidth = 120
+    # imageHeight = 120
 
+# 網站頂部的導覽列選單
+[[menu.main]]
+  identifier = "archives"
+  name = "文章封存"
+  url = "/archives/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜尋"
+  url = "/search/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "標籤"
+  url = "/tags/"
+  weight = 30
 
 
