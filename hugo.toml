@@ -3,7 +3,7 @@ baseURL = "https://nda.pages.dev/"
 languageCode = "zh-CN" # 已為您設定為繁體中文
 title = "風向 Pulse"
 theme = "PaperMod"
-paginate = 5
+paginate = 10
 
 # 這是 PaperMod 主題的參數設定
 [params]
