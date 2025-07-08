@@ -19,9 +19,13 @@ paginate = 10
     enabled = true # 設定為 true 來啟用首頁個人簡介
     title = "風向 Pulse" # 顯示在個人簡介上的大標題
     subtitle = "以事實、常識、邏輯，觀世界" # 顯示在標題下方的副標題
-    # imageUrl = "/images/profile.png" # 如果您有頭像圖片，可以取消這行的註解並上傳圖片到 static/images/logo.svg
-    # imageWidth = 120
+    imageUrl = "/img/logo.svg" # 如果您有頭像圖片，可以取消這行的註解並上傳圖片到 static/img/logo.svg
+    # imageWidth = 240
     # imageHeight = 120
+    # 在個人簡介下方添加按鈕
+    [[params.profileMode.buttons]]
+      name = "所有文章"
+      url = "/posts" # 連結到文章列表頁
 
 # 網站頂部的導覽列選單
 [[menu.main]]
