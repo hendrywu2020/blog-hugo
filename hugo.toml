@@ -1,34 +1,37 @@
-baseURL = "https://nda.pages.dev/"
-languageCode = "zh-TW"
-title = "風向 Pulse"
-theme = "PaperMod"
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <!-- 直接显示图片 -->
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="風向 Pulse">
+                <img src="{{ "img/logo.svg" | absURL }}" alt="風向 Pulse Logo" aria-label="風向 Pulse Logo" style="max-width: 100%; height: auto;">
+            </a>
+        </div>
 
-[pagination]
-  pagerSize = 10
-
-[params]
-  author = "風向 Pulse"
-  description = "以事實、常識、邏輯，觀世界"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowCodeCopyButtons = true
-  logo = "img/logo.svg"   # 這行設定 logo，小寫 logo
-
-[[menu.main]]
-  identifier = "archives"
-  name = "文章封存"
-  url = "/archives/"
-  weight = 10
-
-[[menu.main]]
-  identifier = "search"
-  name = "站內搜尋"
-  url = "/search/"
-  weight = 20
-
-[[menu.main]]
-  identifier = "tags"
-  name = "所有標籤"
-  url = "/tags/"
-  weight = 30
+        <!-- 保留导航菜单 -->
+        <ul id="menu">
+            {{- range site.Menus.main }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+            {{- $page_url:= .Permalink | absLangURL }}
+            {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+            <li>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
+                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                        {{- .Pre }}
+                        {{- .Name -}}
+                        {{ .Post -}}
+                    </span>
+                    {{- if (findRE "://" .URL) }}&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                    {{- end }}
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+    </nav>
+</header>
